@@ -1,5 +1,6 @@
 const express = require('express')
 const bodyParser = require('body-parser')
+require('dotenv').config()
 const {
         WAConnection,
         WAChatUpdate,
@@ -79,7 +80,7 @@ app.get('/', (req,res) => {
 	res.send('api')
 })
 
-app.listen(3000, () =>{
+app.listen(PORT, () =>{
 	console.log('server started')
 })
 
